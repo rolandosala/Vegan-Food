@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&style=regular,semibold,bold,');
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+.nav-container{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    background-color: transparent;
+}
+.nav-container:hover{
+    cursor: pointer;
+}
+.logo-container{
+    background-color: transparent;
+}
+.logo-container img{
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+.menu-container{
+    background-color: transparent;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+.menu-container a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+}
+.menu-container a:hover{
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(38, 134, 38);
+    color: rgb(38, 134, 38);
+    font-weight: 400;
+}
+.menu-container a:nth-child(4):hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.option-container{
+    background-color: transparent;
+    padding: 5px;
+    font-size: 20px;
+}
+.option-container span i:hover{
+    color: white;
+    font-size: 25px;
+}
+.main-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: -1;
+    display: flex;
+}
+.main-container .leftside-container{
+    position: relative;
+    width: 60%;
+    height: inherit;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.main-container .leftside-container .card-icons{
+    padding: 50px 20px;
+    width: 10%;
+    height: inherit;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container .leftside-container .card-icons p{
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding-top: 40px;
+    transform: rotate(180deg);
+    letter-spacing: 3px;
+}
+.main-container .leftside-container .card-icons a{
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+    transition: .5s;
+}
+.main-container .leftside-container .card-icons a:hover{
+    color:rgb(4, 163, 26);
+    cursor: pointer;
+    font-size: 25px;
+}
+.main-container .leftside-container .card-introduction{
+    width: 100%;
+    height: 50vh;
+    background-color: transparent;
+    padding: 20px;
+}
+.main-container .leftside-container .card-introduction .intro-title{
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 90px;
+    font-family: 'Poppins';
+}
+.main-container .leftside-container .card-introduction .intro-title p + p{
+    font-size: 50px;
+    line-height: 30px;
+}
+.main-container .leftside-container .card-introduction .intro-content{
+    width: 60%;
+    padding:  5px 20px;
+    border-top: 2px solid black;
+    font-family: 'Poppins';
+    text-transform: capitalize;
+}
+.main-container .leftside-container .card-introduction .intro-btn{
+    padding: 40px 20px;
+}
+.main-container .leftside-container .card-introduction .intro-btn button{
+    padding: 10px 50px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    background-color: limegreen;
+    text-transform: uppercase;
+    color: white;
+    transition: .5s;
+}
+.main-container .leftside-container .card-introduction .intro-btn button:hover{
+    box-shadow: 0px 0px 10px black; 
+    cursor: pointer;
+    margin-top: -10px;
+}
+.main-container .rightside-container{
+    position: relative;
+    width: 40%;
+    height: inherit;
+    background-color: rgb(4, 163, 26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container .rightside-container .img-container{
+    position: absolute;
+    left: -70%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: transparent;
+}
+.main-container .rightside-container .img-container img{
+    width: 160%;
+    height: 160%;
+    background-color: transparent;
+}
+@media only screen and (max-width: 660px){
+    .nav-container{
+        display: flex;
+        padding: 20px 20px;
+    }
+    .logo-container{
+        width: 25%;
+        height: 25%;
+    }
+    .logo-container img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .menu-container{
+        display: none;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        padding: 10px 20px;
+        text-align: right;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        background-color: rgba(38, 134, 38, .5);
+        border-radius: 10px;
+        transition: .5s;
+    }
+    .menu-container a{
+        padding: 5px;
+        
+    }
+    .menu-container a:hover{
+        color: white;
+        border-bottom: 2px solid white;
+    }
+    
+    .option-container{
+        padding: 20px 15px;
+    }
+    .option-container span i:hover{
+        color: rgb(38, 134, 38);
+    }
+    .nav-container:hover .menu-container{
+        display: flex;
+        
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main-container .leftside-container{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+        top: 20%;
+    }
+    .main-container .leftside-container .card-icons{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        justify-content: center;
+        background-color: rgb(38, 134, 38);
+    }
+    .main-container .leftside-container .card-icons p{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        writing-mode: horizontal-tb;
+        transform: rotate(360deg);
+        background-color: transparent;
+        padding: 0;
+    }
+    .main-container .leftside-container .card-icons a:hover{
+        color: white;
+    }
+    .main-container .leftside-container .card-introduction{
+        height: auto;
+    }
+    .main-container .leftside-container .card-introduction .intro-title{
+        font-size: 60px;
+    }
+    .main-container .leftside-container .card-introduction .intro-title p + p{
+        font-size: 30px;
+    }
+    .main-container .leftside-container .card-introduction .intro-content{
+        width: 100%;
+    }
+    .main-container .rightside-container{
+        width: 100%;
+        height: 50vh;
+        background-color: transparent;
+    }
+    .main-container .rightside-container .img-container{
+        position: fixed;
+        z-index: -1;
+        padding: 0;
+        left: 0;
+        top: 15%;
+        width: 100%;
+        background-color: transparent;
+    }
+    .img-container .rightside-container .img-container img{
+        width: 100%;
+        height: 100%;
+    }
+}
